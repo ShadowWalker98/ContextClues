@@ -29,13 +29,13 @@ function createHeader(item, num, getI, names) {
     var text = document.createTextNode("Accusation " + (num + 1));
     var node = document.createElement("h3");
     node.appendChild(text);
-    addListener(node, getI, names);
+    addListener(node, num, names);
     item.appendChild(node);
 }
 
-function addListener(ele, getI, names) {
+function addListener(ele, num, names) {
     ele.addEventListener("click", function() {
-         console.log(names[getI()])
+         console.log(names[num])
     });
 
 }
